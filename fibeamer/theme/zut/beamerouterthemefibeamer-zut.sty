@@ -131,22 +131,22 @@
     \begin{tikzpicture}[
       remember picture,
       overlay,
-      xshift=0.5\fibeamer@lengths@logowidth,
-      yshift=0.5\fibeamer@lengths@logoheight
+      xshift=1.2\fibeamer@lengths@logowidth,
+      yshift=0.1\fibeamer@lengths@logoheight
     ]
       \node at (0,0) {
         \fibeamer@includeLogo[
-          width=\fibeamer@lengths@logowidth,
-          height=\fibeamer@lengths@logoheight
+          width=1.5\fibeamer@lengths@logowidth,
+          height=1.5\fibeamer@lengths@logoheight
         ]};
     \end{tikzpicture}
-
+    
     % Input the title
     \usebeamerfont{title}%
     \usebeamercolor[fg]{title}%
-    \begin{minipage}[b][2\baselineskip][b]{\textwidth}%
-      \raggedright\inserttitle
-    \end{minipage}
+    \vskip 1cm
+    \raggedright\inserttitle
+    
     \vskip-.5\baselineskip
 
     % Input the dashed line
