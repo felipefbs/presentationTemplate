@@ -30,16 +30,59 @@
 \usepackage{amsmath, amssymb}
 \usepackage{url}       % `\url`s
 \usepackage{listings}  % Code listings
+\usepackage{graphicx}
 \frenchspacing
 \begin{document}
 \frame[c]{\maketitle}
 
 \AtBeginSection[]{% Print an outline at the beginning of sections
   \begin{frame}<beamer>
-    \frametitle{Outline for Section \thesection}
+    \frametitle{Seção \thesection}
     \tableofcontents[currentsection]
   \end{frame}}
 
 \begin{darkframes}
+
+  \begin{frame}
+    \usebeamerfont{title}%
+    \usebeamercolor[fg]{title}%
+    \vskip 0.5cm
+    \raggedright Obrigado!
+    \vskip-.5\baselineskip
+    \begin{pgfpicture}
+      \pgfsetlinewidth{2pt}
+      \pgfsetroundcap
+      \pgfsetdash{{0pt}{4pt}}{0cm}
+
+      \pgfpathmoveto{\pgfpoint{0mm}{0mm}}
+      \pgfpathlineto{\pgfpoint{\textwidth}{0mm}}
+
+      \pgfusepath{stroke}
+    \end{pgfpicture}
+
+    % Input the subtitle
+    \usebeamerfont{subtitle}%
+    \usebeamercolor[fg]{subtitle}%
+    \begin{minipage}{\textwidth}
+      \raggedright%
+      Felipe Ferreira Bezerra da Silva%
+    \end{minipage}\vskip.25\baselineskip
+
+    % Input the author's name
+    \usebeamerfont{author}%
+    \usebeamercolor[fg]{author}%
+
+    \raggedright%
+    felipeffbs3x@gmail.com
+    \vskip 1cm
+
+    \begin{figure}[b]
+      \includegraphics[width=.25\textwidth]{./fibeamer/logo/zut/ifpb.png}
+      \hspace{1cm}
+      \includegraphics[width=.25\textwidth]{./fibeamer/logo/zut/gcompi.png}
+    \end{figure}
+  \end{frame}
+
+
 \end{darkframes}
 \end{document}
