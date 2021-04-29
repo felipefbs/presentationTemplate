@@ -10,7 +10,7 @@
 % If you found any bugs please contact @karlosos
 % This repository is hosted on github https://github.com/karlosos/zut-fibeamer/
 
-\documentclass[t]{beamer}
+\documentclass[c]{beamer}
 \usetheme[faculty=wi]{fibeamer}
 \usepackage[utf8]{inputenc}
 \usepackage[
@@ -31,6 +31,10 @@
 \usepackage{url}       % `\url`s
 \usepackage{listings}  % Code listings
 \usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{makecell}
+
+
 \frenchspacing
 \begin{document}
 \frame[c]{\maketitle}
@@ -132,6 +136,78 @@
         \item Falta de linha de visada
       \end{itemize}
     \end{block}
+  \end{frame}
+
+  \section{IEEE 802.15.4g SUN}
+  \begin{frame}{Modulações do IEEE 802.15.4g SUN}
+    \framesubtitle{SUN-FSK}
+    \begin{figure}
+      \centering
+      \includegraphics[width=.5\textwidth]{resources/Fsk.png}\\
+      \footnotesize{Disponível em \url{https://en.wikipedia.org/wiki/Frequency-shift_keying}}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Modulações do IEEE 802.15.4g SUN}
+    \framesubtitle{SUN-FSK}
+    \begin{exampleblock}{\begin{itemize}
+          \item Eficiência energética
+          \item Compatibilidade com sistemas legados
+        \end{itemize}}
+    \end{exampleblock}
+
+    \begin{block}{Paramêtros}
+      \begin{itemize}
+        \item {Faixas de Frequência} - \char`~ 915 ou \char`~ 2400 MHz
+        \item {Índice de Modulação} - 1,0 ou 0,5
+        \item {Largura de banda do Canal} - 200 ou 400 kHz
+        \item {Taxa de Transmissão} - {50}, {150} ou {200} k\emph{bits}/s
+      \end{itemize}
+    \end{block}
+  \end{frame}
+
+  \begin{frame}{Modulações do IEEE 802.15.4g SUN}
+    \framesubtitle{SUN-OQPSK}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{resources/OQPSK_timing_diagram.png}\\
+      \footnotesize{Disponível em \url{https://en.wikipedia.org/wiki/Phase-shift_keying}}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Modulações do IEEE 802.15.4g SUN}
+    \framesubtitle{SUN-OQPSK}
+    \begin{exampleblock}{
+        \begin{itemize}
+          \item Extendida do padrão IEEE 802.15.4
+                \begin{itemize}
+                  \item Novas \alert{faixas de frequência}
+                  \item Diferentes \alert{fatores de espalhamento}
+                \end{itemize}
+          \item Suporta \alert{taxas de transmissão} de \alert{6,25} a até \alert{500} k\emph{bits}/s
+        \end{itemize}}
+    \end{exampleblock}
+  \end{frame}
+
+  \begin{frame}{Modulações do IEEE 802.15.4g SUN}
+    \framesubtitle{SUN-OFDM}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{resources/ofdm.jpg}\\
+      \footnotesize{Disponível em \url{https://figshare.com/articles/figure/ofdm-subcarriers/3470288/1}}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Modulações do IEEE 802.15.4g SUN}
+    \framesubtitle{SUN-OFDM}
+    \begin{exampleblock}{
+        \begin{itemize}
+          \item Utiliza diferentes esquemas de modulação e codificação - BPSK, QPSK e 16-QAM
+          \item Esquemas de repetição
+          \item Largura de banda do canal - 200 e 1200 MHz
+          \item Taxa de transmissão - 50 até 800 k\emph{bits}/s
+        \end{itemize}}
+    \end{exampleblock}
   \end{frame}
 
 
