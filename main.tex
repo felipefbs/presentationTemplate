@@ -210,6 +210,90 @@
     \end{exampleblock}
   \end{frame}
 
+  \section{Experimento}
+  \begin{frame}{Experimento}
+    \framesubtitle{Visão Geral}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.53\textwidth]{resources/Subtract.jpg}
+      \includegraphics[width=0.4\textwidth]{resources/ifpb_sala.jpg}\\
+      \footnotesize{Disponível em \url{https://www.ifpb.edu.br/noticias/2018/01/copy_of_ifpb-entrega-obra-inedita-na-rede-federal}}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Experimento}
+    \framesubtitle{Visão Geral}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.7\textwidth]{resources/tx_canaleta.jpg}\\
+      \footnotesize{Fonte autoral}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Experimento}
+    \framesubtitle{Visão Geral}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{resources/rede_visão_geral.png}\\
+      \footnotesize{Fonte autoral}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Experimento}
+    \framesubtitle{OpenMote B}
+    \begin{figure}
+      \centering
+      \includegraphics[width=.8\textwidth]{resources/openmote-b.jpg}\\
+      \footnotesize{Fonte autoral}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Experimento}
+    \framesubtitle{Conteúdo das Mensagens}
+    \begin{itemize}
+      \item \alert{device\_id} \\ identificador dispositivo
+      \item \alert{packet\_counter} \\ identificador auto incremental da mensagem transmitida
+      \item \alert{tx\_mode} \\ número indicador da modulação utilizada na transmissão
+      \item \alert{tx\_counter} \\ número indicador do ciclo de transmissão
+    \end{itemize}
+  \end{frame}
+  \begin{frame}{Experimento}
+    \framesubtitle{Conteúdo das Mensagens}
+    \begin{itemize}
+      \item \alert{csma\_retries} \\ número indicador da quantidade de tentativas da transmissão
+      \item \alert{csma\_rssi} \\ número indicador da energia presente no canal de transmissão quando há uma tentativa de realizar a transmissão da mensagem
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Experimento}
+    \framesubtitle{OpenMote B}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{resources/ciclos.png}\\
+      \footnotesize{Fonte autoral}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Experimento}
+    \framesubtitle{Recepção e Persistência dos Dados}
+    \begin{block}{Dispositivos Receptores}
+      \begin{itemize}
+        \item \alert{Recebem} a sequência de \emph{bytes} via rádio
+        \item \alert{Verifica} o valor de RSSI
+        \item \alert{Envia} a sequência de \emph{bytes} pela interface serial
+      \end{itemize}
+    \end{block}
+
+    \begin{block}{Script Python}
+      \begin{itemize}
+        \item \alert{Recebe} a sequência de \emph{bytes} via serial
+        \item \alert{Decodifica} e \alert{estrutura}
+        \item \alert{Armazena} no banco de dados
+      \end{itemize}
+    \end{block}
+  \end{frame}
+
+
 
   \begin{frame}
     \usebeamerfont{title}%
